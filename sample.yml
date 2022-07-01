@@ -1,5 +1,8 @@
 - name: Playbook1
   hosts: localhost
+  vars: 
+   URL: global.clouditz.com
   tasks:
   - name: print message_1
-    debug: msg= hello everyone
+    debug:
+     msg: "{{URL}}"
