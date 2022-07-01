@@ -1,9 +1,8 @@
 - name: Playbook 
-  hosts: all
+  hosts: localhost
   vars:
-      URL: global cloudblitz.in
+   URL: global cloudblitz.in
   task:
     name: print message_1
     debug:
-      msg:"{{URL}}"
-      
+     msg:"{{URL}}"
