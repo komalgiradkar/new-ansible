@@ -1,10 +1,9 @@
-- name: playbook
+- name: Playbook1
   hosts: localhost
-  vars:
-    URL: lereladdu.com
+  vars_files: jarvisfile.yml
+
   tasks:
-  - name: print 1
+
+  - name: Print messages_1
     debug:
-     msg: "{{URL}}"
-  vars:
-   URL: aws.com
+      msg: "{{URL}}"
