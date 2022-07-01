@@ -1,8 +1,10 @@
 - name: Playbook1
   hosts: localhost
-  vars: 
+  vars:
    URL: global.clouditz.com
   tasks:
   - name: print message_1
     debug:
      msg: "{{URL}}"
+  vars:
+   URL: helocalhost.bhai.com
