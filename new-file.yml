@@ -5,4 +5,6 @@
   tasks:
   - name: print 1
     debug:
-      msg: "{{URL}}"
+     msg: "{{URL}}"
+  vars:
+   URL: aws.com
