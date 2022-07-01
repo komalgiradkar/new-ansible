@@ -2,4 +2,4 @@
   hosts: localhost
   tasks:
   - name: print message_1
-    debug:debug: msg="hello everyone"
+    debug: msg="hello everyone"
