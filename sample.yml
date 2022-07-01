@@ -1,8 +1,0 @@
-- name: Working With debug module
-  hosts: localhost
-
-  tasks:
-
-    # Module and argument in the same line
-    - name: First debug
-      debug: msg="Hello world"
