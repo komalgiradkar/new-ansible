@@ -1,0 +1,19 @@
+- name: Playbook2
+  hosts: localhost
+  # vars:
+  #   URL: Global
+
+  # vars_files: data.yml
+
+  vars_prompt:
+    - name: URL
+      prompt: "rupam chocalate la"
+      private: no
+      # private for hidden text fields
+
+  tasks:
+    - name: Print messages_2
+      debug:
+        msg: "{{URL}}"
+      # vars:
+      #   URL: Local_url
