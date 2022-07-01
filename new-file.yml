@@ -1,9 +1,9 @@
 - name: Playbook1
   hosts: localhost
-  vars_files: new-file.yml
+  vars_files: komal.yml
 
   tasks:
 
   - name: Print messages_1
     debug:
-      msg: "{{URL}}"
+     msg: "{{URL}}"
