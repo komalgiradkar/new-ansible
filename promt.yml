@@ -1,0 +1,12 @@
+- name: Playbook1
+  hosts: all
+
+  vars_prompt:
+  - name: URL
+    prompt: "komal"
+    private: false
+
+  tasks: 
+  - name: print url
+    debug:
+      msg: "{{URL}}"
