@@ -5,4 +5,4 @@
   
   - name: print ansible user 
     debug:
-      msg: "ansible user: {{ansible_python_version}}""
+      msg: "ansible user: {{ansible_python_version}}"
