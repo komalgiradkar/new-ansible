@@ -4,5 +4,5 @@
   tasks:
     - name: package installation
       package: 
-        name: httpd
+        name: apache2
         state: present
