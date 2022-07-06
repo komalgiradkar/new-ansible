@@ -16,4 +16,4 @@
         name: "{{item}}"
         state: latest
       loop:
-        - nginix
+        - nginx
