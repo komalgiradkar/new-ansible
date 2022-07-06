@@ -1,6 +1,13 @@
-- name: Playbook1
+- name: playbook_2
   hosts: all
-  tasks: 
-  - name: print url
-    debug:
-      msg: "{{URL}}"
+  gather_facts: yes
+  tasks:
+    - name: Print the task_1
+      debug:
+        msg: "{{ansible_distribution}}" 
+      when: ansible_distribution == "Ubuntu" and ansible_os_family == "Debian"
+      when: (ansible_distribution == "Ubuntu" and ansible_os_family == "Debian") or (ansible_distribution == "Ubuntu" and ansible_os_family == "Debian")
+    
+    - name: print uid
+      debug:
+        msg: "my user id is {{ansible_selinux_python_present}}"
