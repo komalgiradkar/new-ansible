@@ -6,8 +6,4 @@
       debug:
         msg: "{{ansible_distribution}}" 
       when: ansible_distribution == "Ubuntu" and ansible_os_family == "Debian"
-      when: (ansible_distribution == "Ubuntu" and ansible_os_family == "Debian") or (ansible_distribution == "Ubuntu" and ansible_os_family == "Debian")
-    
-    - name: print uid
-      debug:
-        msg: "my user id is {{ansible_selinux_python_present}}"
+      when: (ansible_distribution == "Ubuntu" and ansible_os_family == "Debian") or (ansible_distribution == "Ubuntu" and ansible_os_family 
