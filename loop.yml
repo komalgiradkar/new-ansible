@@ -13,7 +13,7 @@
     - name: install packages
       become: true
       yum: 
-        name: "{{item}}"
+        name: {{item}}
         state: latest
       loop:
         - httpd
