@@ -1,12 +1,9 @@
-- name: Playbook1
+- name: setfacts_playbook
   hosts: all
+  tasks:
+    - name: set fact
+      set_fact: URL=["www.google.com","www.igp.com"] city="nagpur"
 
-  vars_prompt:
-  - name: URL
-    prompt: "komal"
-    private: false
-
-  tasks: 
-  - name: print url
-    debug:
-      msg: "{{URL}}"
+    - name: print variable
+      debug:
+        msg: "{{URL}}  {{city}}"
