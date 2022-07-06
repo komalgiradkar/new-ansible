@@ -12,7 +12,7 @@
 
     - name: install packages
       become: true
-      yum: 
+      apt: 
         name: "{{item}}"
         state: latest
       loop:
