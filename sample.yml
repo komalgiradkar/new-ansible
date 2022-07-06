@@ -1,9 +1,7 @@
-- name: playbook_2
-  hosts: all
-  gather_facts: yes
+- name: Package server installation
+  hosta: all
   tasks:
-    - name: Print the task_1
-      debug:
-        msg: "{{ansible_distribution}}" 
-      when: ansible_distribution == "Ubuntu" and ansible_os_family == "Debian"
-      when: (ansible_distribution == "Ubuntu" and ansible_os_family == "Debian") or (ansible_distribution == "Ubuntu" and ansible_os_family 
+    - name: package installation
+      package: 
+        name: httpd
+        state: present
