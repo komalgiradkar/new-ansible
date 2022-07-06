@@ -4,5 +4,5 @@
   tasks:
     - name: package installation
       package: 
-        name: apache2
+        name: ansible
         state: present
