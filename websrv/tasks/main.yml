@@ -1,2 +1,30 @@
 ---
 # tasks file for websrv
+- name: install package
+  package:
+    name: nginx
+    state: latest
+
+- name: download web-application
+  get_url:
+    url: https://www.free-css.com/assets/files/free-css-templates/download/page280/sungla.zip
+    dest: /usr/share/nginx/html
+
+- name: install package unzip
+  package:
+    name: unzip
+    state: latest
+
+- name: extracting zip file
+  unarcive:
+    src: /usr/share/nginx/html/sungla.zip
+    dest: /usr/share/html
+    remote_src: true
+
+- name: start and enableing httpd service
+  service:
+    name: nginx
+    state: started
+    enabled: true  
+  notify:
+   - restart nginx
