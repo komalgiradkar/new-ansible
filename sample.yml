@@ -1,8 +1,0 @@
-- name: Package server installation
-  hosts: all
-  become: true
-  tasks:
-    - name: package installation
-      package: 
-        name: ansible
-        state: present

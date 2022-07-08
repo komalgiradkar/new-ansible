@@ -1,8 +1,0 @@
-- name: Playbook1
-  hosts: all
-
-  tasks: 
-  
-  - name: print ansible user 
-    debug:
-      msg: "ansible user: {{ansible_python_version}}"

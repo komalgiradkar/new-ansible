@@ -1,8 +1,0 @@
-- name: Playbook1
-  hosts: all
-  tasks: 
-  - shell: uptime >> uptime.txt
-  - name: print url
-    debug:
-      msg: "{{ansible_distribution}}"
-   
