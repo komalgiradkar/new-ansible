@@ -1,9 +1,16 @@
 ---
 # tasks file for websrv
-- name: install package
-  package:
-    name: openjdk-8-jre-headless 
+- name: update 
+  apt: 
+    update_cache: yes
+    
+- name: install java
+  apt:  
+    name: "{{ item }}"
     state: present
+    loop:
+      - openjdk-8-jre-headless 
+      - unzip
 
 - name: download web-application
   get_url:
