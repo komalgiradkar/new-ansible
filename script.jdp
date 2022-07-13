@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-             echo 'success in jenkings' >> rushabh.txt
+             echo 'success in jenkings >> rushabh.txt'
             }
         }
         stage('Deploy') { 
