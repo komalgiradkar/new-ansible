@@ -1,5 +1,5 @@
 pipeline {
-    agent komal1
+    agent { label 'komal1' }
     stages {
         stage('git pull') { 
             steps {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-            sh 'mkdir rkk'
+              sh 'mkdir koma'
             }
         }
     }
