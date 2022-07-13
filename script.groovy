@@ -1,12 +1,13 @@
-node {  
-    stage('Build') { 
-        git 'https://github.com/komalgiradkar/new-ansible.git'
-    }
-    stage('Test') { 
-        sh 'mkdir rupam'
 
+job('example-1') {
+    steps {
+        shell('echo Hello World!')
     }
-    stage('Deploy') { 
-        sh 'echo \' welcome to katol\'  >> rushi.txt'
+}
+
+
+job('example-2') {
+    steps {
+        shell('echo hi hello jenkings')
     }
 }
