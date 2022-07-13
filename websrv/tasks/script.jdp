@@ -1,0 +1,20 @@
+pipeline {
+    agent komal1 
+    stages {
+        stage('git pull') { 
+            steps {
+            git 'https://github.com/komalgiradkar/new-ansible.git'
+            }
+        }
+        stage('build') { 
+            steps {
+                echo 'successfully deploy'
+            }
+        }
+        stage('test') { 
+            steps {
+                sh 'mkdir cloud_12'
+            }
+        }
+    }
+}
